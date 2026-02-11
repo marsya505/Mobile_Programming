@@ -1,0 +1,3 @@
+Praktikum ini bertujuan memahami struktur dasar program Dart, penggunaan fungsi, pemanggilan fungsi dari file lain, dan perhitungan sederhana.
+Terdapat dan fungsi yg ada didalamnya yaitu bawaan perkalian 6 x 7 dengan print output Hello wolrd dan pemanggilan fungsi dari calulate tersebut yang menghasilkan angka 42 dari perhitungan.
+Penambhan fungsi kedua adalah untuk menghitung luas segitiga dengan rumus setengah kali alas kali tinggi dimana 0,5 * 5 * 10 akan ditampilakn Luas Segitiga dengan return hasil yaitu 25.0 karena bertipe data double
