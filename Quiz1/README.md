@@ -1,0 +1,7 @@
+This program is designed to calculate the total price of several items stored in a list. Each price is added using the calculateTotal() function, which uses a for-in loop to add all values in the list to produce the initial total price.
+
+In this program, the last three digits of the student ID number also affect the calculation. This number is taken as a unique value, i.e., 005, which is converted to 5.0 and then added to the list of item prices. Since this value is entered into the same list as the other item prices, it is included in the total initial purchase amount and can affect the final calculation result.
+
+After the initial total is calculated, the program then decides if the user will get a discount or not through an if-else branch. If the total purchase is more than Rp200,000, a 10% discount is given, if it is between Rp100,000 and Rp200,000, a 5% discount is given, and if it is less than that, no discount is given. The program also adds a special value taken from the last three digits of the NIM number to the price list as part of the calculated data. 
+
+Finally, the program displays information such as the name, NIM, total purchase before discount, discount amount, discount details, and final payment total after discount. Overall, this program demonstrates the use of functions, lists, loops, branching, and the concept of null safety in a simple calculation process.
