@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_world/basic_widgets/image_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -50,7 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: .center,
           children: [
-            const Text('You have pushed the button this many times:'),
+            const MyImageWidget(),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
