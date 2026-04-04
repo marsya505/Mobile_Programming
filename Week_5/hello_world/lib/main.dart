@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'package:hello_world/basic_widgets/fab_widget.dart';
-// import 'package:hello_world/basic_widgets/image_widget.dart';
-// import 'package:hello_world/basic_widgets/loading_cupertino.dart';
-// import 'package:hello_world/basic_widgets/text_widgets.dart';
+import 'package:hello_world/basic_widgets/text_widgets.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,9 +12,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.red,
+        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const MyHomePage(title: 'My Increment App'),
+      home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
@@ -43,19 +40,14 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              // const MyTextWidget(),
-              // const MyLoadingCupertino(),
-              // const MyImageWidget(),
-              // const MyFabWidget(),
-              'You have pushed the button this many times:',
-            ),
+            const MyTextWidget(),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
@@ -63,17 +55,11 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      bottomNavigationBar: BottomAppBar(
-        child: Container(
-          height: 50.0,
-        ),
-      ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
-        tooltip: 'Increment Counter',
+        tooltip: 'Increment',
         child: const Icon(Icons.add),
-      ), 
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      ),
     );
   }
 }
