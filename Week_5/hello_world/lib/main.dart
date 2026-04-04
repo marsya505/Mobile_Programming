@@ -14,16 +14,26 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: MyLayout(),
+        appBar: AppBar(title: const Text("Contoh TextField")),
+        body: const TextField(
+          obscureText: false,
+          decoration: InputDecoration(
+            border: OutlineInputBorder(),
+            labelText: 'Nama',
+          ),
+        ),
       ),
+    );
+  }
+}  
+      // home: Scaffold(
+      //  body: MyLayout(),
+      // ),
       // title: 'Flutter Demo',
       // theme: ThemeData(
       //  primarySwatch: Colors.red,
       // ),
       // home: const MyHomePage(title: 'My Increment App'),
-    );
-  }
-}
 
 class MyLayout extends StatelessWidget {
   const MyLayout({Key? key}) : super(key: key);
