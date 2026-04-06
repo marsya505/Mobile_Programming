@@ -37,21 +37,32 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var appState = context.watch<MyAppState>();
+    var pair = appState.current;                 // Add this.
 
     return Scaffold(
       body: Column(
         children: [
-          Text('A random AWESOME idea:'),  // Example change.
-          Text(appState.current.asLowerCase),
-        
+          BigCard(),
+          Text(pair.asLowerCase),                // Change to this.
           ElevatedButton(
             onPressed: () {
-              appState.getNext();  // This instead of print().
+              appState.getNext();
             },
             child: Text('Next'),
           ),
         ],
       ),
     );
+  }
+}
+
+class BigCard extends StatelessWidget {
+  const BigCard({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Text('A random AWESOME idea:');
   }
 }
