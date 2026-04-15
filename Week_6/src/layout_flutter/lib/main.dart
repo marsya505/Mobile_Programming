@@ -18,14 +18,14 @@ class MyApp extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.only(bottom: 8),
                   child: const Text(
-                    'Wisata Gunung di Batu',
+                    'Nglirip Waterfall',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
                 Text(
-                  'Batu, Malang, Indonesia',
+                  'Jl. Raya Mulyoagung, Sawah, Mulyoagung, Kec. Singgahan, Kabupaten Tuban, Jawa Timur Indonesia',
                   style: TextStyle(
                     color: Colors.grey[500], 
                   ),
@@ -53,6 +53,17 @@ class MyApp extends StatelessWidget {
       ],
     );
 
+    Widget textSection = Container(
+      padding: const EdgeInsets.all(32),
+      child: const Text(
+        'Easily accessible waterfall flowing '
+        'over mossy rocks into a turquoise '
+        'basin, with viewing platforms. '
+        'Marsya Zulfa Zahrani 244107060005',
+        softWrap: true,
+      ),
+    );
+
     return MaterialApp(
       title: 'Flutter layout: Marsya Zulfa Zahrani 244107060005',
       home: Scaffold(
@@ -63,6 +74,7 @@ class MyApp extends StatelessWidget {
           children: [
             titleSection,
             buttonSection,
+            textSection,
           ],
         ),
       ),
