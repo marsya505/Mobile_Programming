@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:belanja/models/item.dart';
 
 class ItemPage extends StatelessWidget {
+  final Item itemArgs; 
+
+  const ItemPage({Key? key, required this.itemArgs}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    final itemArgs = ModalRoute.of(context)!.settings.arguments as Item;
-
     return Scaffold(
       appBar: AppBar(
         title: Text(itemArgs.name),
