@@ -25,21 +25,13 @@ class MyApp extends StatelessWidget {
             const SizedBox(height: 30),
 
             Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
               children: [
-                Expanded(child: Image.asset('images/pict1.jpg')), 
-                Expanded(child: Image.asset('images/pict2.jpg')),
-                Expanded(child: Image.asset('images/pict3.png')),
-              ],
-            ),
-            const SizedBox(height: 30),
-
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Expanded(child: Image.asset('images/pict1.jpg')),
-                Expanded(flex: 2, child: Image.asset('images/pict2.jpg')),
-                Expanded(child: Image.asset('images/pict3.png')),
+                Icon(Icons.star, color: Colors.green[500]),
+                Icon(Icons.star, color: Colors.green[500]),
+                Icon(Icons.star, color: Colors.green[500]),
+                const Icon(Icons.star, color: Colors.black),
+                const Icon(Icons.star, color: Colors.black),
               ],
             ),
           ],
