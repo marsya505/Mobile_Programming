@@ -7,31 +7,19 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  Widget _buildDecoratedImage(int imageIndex) => Expanded(
-        child: Container(
-          decoration: BoxDecoration(
-            border: Border.all(width: 10, color: Colors.black38),
-            borderRadius: const BorderRadius.all(Radius.circular(8)),
-          ),
-          margin: const EdgeInsets.all(4),
-          child: Image.asset('images/pict$imageIndex.jpeg', fit: BoxFit.cover),
-        ),
+  Widget _buildGrid() => GridView.extent(
+        maxCrossAxisExtent: 150,
+        padding: const EdgeInsets.all(4),
+        mainAxisSpacing: 4,
+        crossAxisSpacing: 4,
+        children: _buildGridTileList(30),
       );
 
-  Widget _buildImageRow(int imageIndex) => Row(
-        children: [
-          _buildDecoratedImage(imageIndex),
-          _buildDecoratedImage(imageIndex + 1),
-        ],
-      );
-
-  Widget _buildImageColumn() => Container(
-        decoration: const BoxDecoration(color: Colors.black26),
-        child: Column(
-          children: [
-            _buildImageRow(1),
-            _buildImageRow(3),
-          ],
+  List<Widget> _buildGridTileList(int count) => List.generate(
+        count,
+        (i) => Image.asset(
+          'images/pict$i.jpeg',
+          fit: BoxFit.cover,
         ),
       );
 
@@ -41,12 +29,10 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Layout: Marsya Zulfa Zahrani',
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Flutter Layout Demo'),
+          title: const Text('GridView Demo'),
         ),
         backgroundColor: Colors.white,
-        body: Center(
-          child: _buildImageColumn(),
-        ),
+        body: _buildGrid(),
       ),
     );
   }
