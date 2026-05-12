@@ -15,8 +15,8 @@ class _LoginPageState extends State<LoginPage> {
   final TextEditingController _passwordController = TextEditingController();
 
   bool _isLogin = true; // toggle antara Login dan Register
-  bool _isLoading = false;
-  bool _obscurePassword = true;
+  bool _isLoading = false;// menampilkan loading indicator
+  bool _obscurePassword = true; // menyembunyikan/menampilkan password
 
   @override
   void dispose() {

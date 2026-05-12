@@ -18,27 +18,27 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyB7zdOXor4wFU6sSdiddiO9Th-4Bo5MGfE',
-    appId: '1:947122131267:android:46e5d0370b916f24701ff6',
-    messagingSenderId: '947122131267',
-    projectId: 'weather-app-ec9d9',
-    storageBucket: 'weather-app-ec9d9.firebasestorage.app',
+    apiKey: 'apiKey',
+    appId: 'appId',
+    messagingSenderId: 'messagingSenderId',
+    projectId: 'projectId',
+    storageBucket: 'storageBucket',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyB7zdOXor4wFU6sSdiddiO9Th-4Bo5MGfE',
-    appId: '1:947122131267:android:46e5d0370b916f24701ff6',
-    messagingSenderId: '947122131267',
-    projectId: 'weather-app-ec9d9',
-    storageBucket: 'weather-app-ec9d9.firebasestorage.app',
+    apiKey: 'apiKey',
+    appId: 'appId',
+    messagingSenderId: 'messagingSenderId',
+    projectId: 'projectId',
+    storageBucket: 'storageBucket',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyB7zdOXor4wFU6sSdiddiO9Th-4Bo5MGfE',
-    appId: '1:947122131267:android:46e5d0370b916f24701ff6',
-    messagingSenderId: '947122131267',
-    projectId: 'weather-app-ec9d9',
-    storageBucket: 'weather-app-ec9d9.firebasestorage.app',
-    iosBundleId: 'com.example.flutter_weather_auth',
+    apiKey: 'apiKey',
+    appId: 'appId',
+    messagingSenderId: 'messagingSenderId',
+    projectId: 'projectId',
+    storageBucket: 'storageBucket',
+    iosBundleId: 'iosBundleId',
   );
 }

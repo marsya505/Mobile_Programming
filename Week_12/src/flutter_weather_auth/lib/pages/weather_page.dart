@@ -16,17 +16,15 @@ class _WeatherPageState extends State<WeatherPage> {
   final WeatherService _weatherService = WeatherService();
   final TextEditingController _cityController = TextEditingController();
 
-  WeatherModel? _weather;
-  bool _isLoading = false;
-  String? _errorMessage;
-
-  // Kota default saat pertama buka
-  String _currentCity = 'Malang';
+  WeatherModel? _weather; // data cuaca (null = belum dimuat)
+  bool _isLoading = false; // status loading
+  String? _errorMessage; // pesan error (null = tidak ada error)
+  String _currentCity = 'Malang'; // Kota default saat pertama buka
 
   @override
   void initState() {
     super.initState();
-    _fetchWeather(_currentCity);
+    _fetchWeather(_currentCity); // langsung ambil cuaca saat halaman dibuka
   }
 
   @override
